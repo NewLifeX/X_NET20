@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Reflection;
 using System.Text;
-using System.Web.Script.Serialization;
 using System.Xml.Serialization;
 using NewLife.Log;
 using NewLife.Reflection;
+#if NET4
+using System.Web.Script.Serialization;
+#endif
 
 namespace NewLife.Serialization
 {
@@ -138,6 +140,7 @@ namespace NewLife.Serialization
         }
     }
 
+#if NET4
     class JsonDefault : IJsonHost
     {
         //static JsonDefault()
@@ -161,7 +164,7 @@ namespace NewLife.Serialization
             return false;
         }
 
-        #region IJsonHost 成员
+    #region IJsonHost 成员
         public String Write(Object value, Boolean indented)
         {
             var json = new JavaScriptSerializer().Serialize(value);
@@ -243,8 +246,9 @@ namespace NewLife.Serialization
         //    }
         //    return sb.ToString();
         //}
-        #endregion
+    #endregion
     }
+#endif
 
     class JsonNet : IJsonHost
     {

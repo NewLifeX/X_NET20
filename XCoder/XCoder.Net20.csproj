@@ -50,6 +50,14 @@
       <Link>Properties\AssemblyInfo_.cs</Link>
     </Compile>
     <Compile Include="Engine\IcoHelper.cs" />
+    <Compile Include="Engine\ModelConfig.cs" />
+    <Compile Include="Engine\UIConfig.cs" />
+    <Compile Include="FolderInfo\FrmEncodeReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderInfo\FrmEncodeReplace.Designer.cs">
+      <DependentUpon>FrmEncodeReplace.cs</DependentUpon>
+    </Compile>
     <Compile Include="FolderInfo\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,7 +82,6 @@
     <Compile Include="NewModelForm\AddTable.Designer.cs">
       <DependentUpon>AddTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Network\AutoUpdate.cs" />
     <Compile Include="Network\BingTranslate.cs" />
     <Compile Include="Engine\FileSource.cs" />
     <Compile Include="Engine\XConfig.cs" />
@@ -92,7 +99,6 @@
     <Compile Include="XCom\FrmMain.designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="XCom\UIConfig.cs" />
     <Compile Include="XICO\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,7 +121,9 @@
     <Compile Include="XNet\FrmMain.designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="XNet\UIConfig.cs" />
+    <EmbeddedResource Include="FolderInfo\FrmEncodeReplace.resx">
+      <DependentUpon>FrmEncodeReplace.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FolderInfo\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,12 +160,6 @@
     </Compile>
     <Compile Include="NewModelForm\BaseForm.designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\FrmFix.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\FrmFix.Designer.cs">
-      <DependentUpon>FrmFix.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\FrmItems.cs">
       <SubType>Form</SubType>
@@ -197,7 +199,6 @@
       <DependentUpon>FrmText.cs</DependentUpon>
     </Compile>
     <Compile Include="Network\ITranslate.cs" />
-    <Compile Include="Network\NnhyServiceTranslate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -207,9 +208,6 @@
     </Compile>
     <EmbeddedResource Include="NewModelForm\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\FrmFix.resx">
-      <DependentUpon>FrmFix.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\FrmItems.resx">
       <DependentUpon>FrmItems.cs</DependentUpon>

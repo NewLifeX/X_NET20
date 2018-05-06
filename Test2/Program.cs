@@ -232,9 +232,9 @@ namespace Test2
 
         static void Test7()
         {
-            TestNewLife_Net test = new TestNewLife_Net();
-            test.StartTest();
-            test.StopTest();
+            //TestNewLife_Net test = new TestNewLife_Net();
+            //test.StartTest();
+            //test.StopTest();
         }
 
         private static void Test8()

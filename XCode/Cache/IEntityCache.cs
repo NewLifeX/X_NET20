@@ -122,7 +122,7 @@ namespace XCode.Cache
         /// <summary>获取数据</summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        TEntity this[TKey key] { get; }
+        TEntity this[TKey key] { get; set; }
 
         /// <summary>获取缓存主键的方法，默认方法为获取实体主键值</summary>
         Func<TEntity, TKey> GetKeyMethod { get; set; }

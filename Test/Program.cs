@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Xml.Serialization;
 using NewLife.Common;
 using NewLife.Compression;
 using NewLife.Log;
-using NewLife.MessageQueue;
 using NewLife.Net;
 using NewLife.Net.IO;
 using NewLife.Net.Stress;

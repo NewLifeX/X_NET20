@@ -73,8 +73,8 @@
                         <td><%= entity.Category %></td>
                         <td><%= entity.Action %></td>
                         <td><%= entity.UserName %></td>
-                        <td><%= entity.IP %></td>
-                        <td><%= entity.OccurTime %></td>
+                        <td><%= entity.CreateIP %></td>
+                        <td><%= entity.CreateTime %></td>
                         <td><%= entity.Remark %></td>
                     </tr>
                     <%

@@ -71,8 +71,10 @@ namespace NewLife.Serialization
 
             else if (obj is IDictionary && obj.GetType().IsGenericType && obj.GetType().GetGenericArguments()[0] == typeof(String))
                 WriteStringDictionary((IDictionary)obj);
+#if NET4
             else if (obj is System.Dynamic.ExpandoObject)
                 WriteStringDictionary((IDictionary<String, Object>)obj);
+#endif
             else if (obj is IDictionary)
                 WriteDictionary((IDictionary)obj);
             else if (obj is Byte[])
@@ -194,9 +196,9 @@ namespace NewLife.Serialization
             _Builder.Append('}');
             _depth--;
         }
-        #endregion
+#endregion
 
-        #region 辅助
+#region 辅助
         private void WritePairFast(String name, String value)
         {
             WriteStringFast(name);
@@ -336,6 +338,6 @@ namespace NewLife.Serialization
 
             _Builder.Append('\"');
         }
-        #endregion
+#endregion
     }
 }
